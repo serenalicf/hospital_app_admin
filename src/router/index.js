@@ -65,6 +65,22 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/dataManagement',
+    component: Layout,
+    redirect: '/dataManagement/list',
+    name: 'Data Management',
+    alwaysShow: true,
+    meta: { title: 'Data Management', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: 'Data Dictionary',
+        component: () => import('@/views/dictionary/list'),
+        meta: { title: 'Data Dictionary' }
+      }
+    ]
+  },
 
   {
     path: '/form',
